@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miltonian&display=swap');
+
 html,body{
     margin: 0;
 }
@@ -8,12 +11,17 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;   
-    gap: 20px; 
+    gap: 10px; 
     padding: 20px 0;
 }
 
 header .title{
     margin: 0;
+    font-family: 'Lakki Reddy',sans-serif;
+    font-size: 3rem;
+    display: flex;
+    text-align: center;
+    color: brown;
 }
 
 header nav{
@@ -30,6 +38,7 @@ header nav button{
     border-radius: 15px;
     font-size: 16px;
     transition: all 300ms;
+    font-family: 'Lakki Reddy',sans-serif;
 }
 
 header nav button:hover{
@@ -38,7 +47,7 @@ header nav button:hover{
 
 header nav button:nth-child(2){
     background-color: whitesmoke;
-    color: black;
+    color: brown;
 }
 
 header nav button:nth-child(3){
@@ -71,8 +80,8 @@ header nav button:nth-child(3){
 
 #content .restaurant-intro p{
     margin: 0;
-    font-size: 18px;
-    font-family: sans-serif;
+    font-size: 30px;
+    font-family: 'Miltonian', serif;
 }
 
 #content .restaurant-intro .intro-image{
@@ -83,7 +92,7 @@ header nav button:nth-child(3){
 /* ---------------------Menu---------------------- */
 
 .menu-container{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
     width: 50%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -103,9 +112,68 @@ header nav button:nth-child(3){
 
 .menu-container .menu-item p{
     margin: 0;
+    font-family: 'Miltonian', serif;
 }
 
 .menu-container .menu-item .icon{
     font-size: 50px;
     margin: 0;
+}
+
+/* -----------------About-------------------- */
+
+.about-container{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 60%;
+}
+
+.about-container p{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Miltonian', serif;
+}
+
+
+/* ------------------------------Media Queries-------------------------------- */
+
+@media (max-width: 900px) {
+    header .title{
+        font-size: 5vw;
+    }
+
+    header nav button{
+        font-size: 8px;
+    }
+
+    #content .restaurant-intro p{
+        font-size: max(3vw,12px);
+    }
+
+    #content .restaurant-intro .intro-image{
+        width: max(50%,200px); 
+    }
+
+    .menu-container .menu-item p{
+        font-size: max(2vw,10px);
+    }
+
+    .menu-container .menu-item .icon{
+        font-size: max(2vw,25px);
+    }
+
+    .about-container p{
+        font-size: max(3vw,12px);
+    }
+}
+
+@media (max-width: 500px){
+    .menu-container{
+        grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+    }
 }
